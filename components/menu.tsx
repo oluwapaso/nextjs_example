@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useState, memo } from 'react'
 import SideBarList from './sidebar_list';
 import { MenuProps } from '@/types/types';
 import Link from 'next/link';
@@ -19,22 +19,81 @@ const Menu = () => {
     {
       title: "Quotes",
       submenu: true,
+      submenuItems: [
+        {
+          title: "Quote Details",
+          link: "/endpoints/quotes/get-quote-details"
+        },
+        {
+          title: "Update Contact Info",
+          link: "/endpoints/quotes/update-contact-info"
+        },
+        {
+          title: "Update Transit Info",
+          link: "/endpoints/quotes/update-transit-info"
+        }]
+    },
+    {
+      title: "Orders",
+      submenu: true,
+      submenuItems: [
+        {
+          title: "Book New Order",
+          link: "/endpoints/orders/book-new-order"
+        },
+        {
+          title: "Order Details",
+          link: "/endpoints/orders/get-order-details"
+        },
+        {
+          title: "Update Contact Info",
+          link: "/endpoints/orders/update-contact-info"
+        },
+        {
+          title: "Update Transit Info",
+          link: "/endpoints/orders/update-transit-info"
+        }]
+    },
+    {
+      title: "Shipper",
+      submenu: true,
       submenuItems: [{
-        title: "Add New Quote",
-        link: "/endpoints/quotes/add-new-quote"
-      },
-      {
-        title: "Update Quote Details",
-        link: "/endpoints/quotes/update-quote-details"
+        title: "Collect Signature",
+        link: "/endpoints/shippers/collect-signature"
       }]
-    }
+    },
+    {
+      title: "Payments",
+      submenu: true,
+      submenuItems: [
+        {
+          title: "Add New Payment",
+          link: "/endpoints/payments/add-new-payment"
+        },
+        {
+          title: "Log Payment Error",
+          link: "/endpoints/payments/add-payment-error"
+        },
+        {
+          title: "Load Payment History",
+          link: "/endpoints/payments/load-payments"
+        }]
+    },
+    {
+      title: "Broker",
+      submenu: true,
+      submenuItems: [{
+        title: "Get Broker Info",
+        link: "/endpoints/broker/get-broker-info"
+      }]
+    },
   ]
 
   return (
     <div className=" border-slate-300 col-span-1 border-b-2">
       <div className="bg-slate-100 p-4">
         <Link href="/">
-          <img src="/star-wars-1-logo-png-transparent.png" alt="Logo goes here" className="max-w-[140px]" />
+          <img src="/Hauling-Desk-Logo-Black.png" alt="Logo goes here" className="max-w-[250px]" />
         </Link>
       </div>
 
@@ -55,4 +114,4 @@ const Menu = () => {
   )
 }
 
-export default Menu
+export default memo(Menu)

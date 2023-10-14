@@ -39,7 +39,7 @@ body {
 }
 
 .contents_area {
-  @apply col-span-4 flex-1 border border-sky-600 p-6 
+  @apply col-span-4 flex-1 p-6 pb-16
 }
 
 .main-list {
@@ -66,3 +66,34 @@ body {
   @apply p-4 bg-slate-700 text-white
 }
 
+.method_badge{
+  @apply py-1 px-2 text-white cursor-pointer font-bold text-[10px] rounded-sm
+} 
+
+.post_badge {
+  @apply bg-blue-800
+}
+
+.get_badge {
+  @apply bg-green-800
+}
+
+.delete_badge{
+  @apply bg-red-800
+}
+
+.api_url_link {
+  @apply font-semibold text-sm ml-2
+}
+
+.args_tbl_hdr {
+  @apply border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left
+}
+
+.arg_tbl_bdy {
+  @apply border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400
+}
+
+.default-value {
+  @apply py-1 px-2 text-white cursor-pointer font-bold text-[10px] rounded-sm bg-purple-900 ml-2
+}

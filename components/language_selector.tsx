@@ -3,7 +3,7 @@
 import React, { useContext, useState } from 'react'
 import { BsChevronDown } from "react-icons/bs";
 import LanguangeSelectorItem from './lang_selector_item';
-import { LanguageContext } from './leads/add-new-lead';
+import { LanguageContext } from '@/app/contexts/context';
 
 const LanguageSelector = () => {
 
@@ -25,12 +25,12 @@ const LanguageSelector = () => {
 
     return (
         <div>
-            <div className=" relative inline-block text-left dropdown">
+            <div className=" relative inline-block text-left dropdown z-10">
                 <span className="rounded-md shadow-sm">
                     <button className="inline-flex justify-center items-center w-full px-2 py-1 text-sm font-medium transition 
                     duration-150 ease-in-out bg-slate-600 hover:text-gray-100" onClick={() => setMenuOpen(!menuOpen)}
                         onBlur={() => setMenuOpen(!menuOpen)}>
-                        <span className="mr-2">Languange</span>
+                        <span className="mr-2">{LangContext?.openedLibrary}</span>
                         <BsChevronDown />
                     </button>
                 </span>

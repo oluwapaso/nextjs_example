@@ -13,3 +13,8 @@
 export type SideBarProps = {
     menu: MenuProps
 }
+
+export type LangContextType = {
+    openedLibrary: string,
+    setOpenedLibrary: React.Dispatch<React.SetStateAction<string>>,
+}

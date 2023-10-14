@@ -12,6 +12,7 @@
     "mysql2": "^3.6.1",
     "next": "latest",
     "react": "latest",
+    "react-code-blocks": "^0.1.4",
     "react-dom": "latest",
     "react-icons": "^4.11.0"
   },

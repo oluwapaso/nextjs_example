@@ -1,3 +1,4 @@
+import Menu from '@/components/menu'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -21,7 +22,10 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"></link>
       </head>
       <body className={inter.className}>
-        <div className="page_container">{children}</div>
+        <div className="page_container">
+          <Menu />
+          {children}
+        </div>
       </body>
     </html>
   )
